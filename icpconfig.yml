@@ -1,0 +1,38 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: DATA+OMITTED
+    server: https://kubernetes.docker.internal:6443
+  name: docker-desktop
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://174.37.17.188:8001
+  name: optumera
+contexts:
+- context:
+    cluster: docker-desktop
+    user: docker-desktop
+  name: docker-desktop
+- context:
+    cluster: docker-desktop
+    user: docker-desktop
+  name: docker-for-desktop
+- context:
+    cluster: optumera
+    namespace: coe
+    user: ahada
+  name: optumera-context
+current-context: optumera-context
+kind: Config
+preferences: {}
+users:
+- name: ahada
+  user:
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoiMmZlYjM5ZGYwYzlhMjlmMjg1YTZiNDkzZGVjMmY5MTBkMTRjMDVhNCIsInJlYWxtTmFtZSI6ImN1c3RvbVJlYWxtIiwidW5pcXVlU2VjdXJpdHlOYW1lIjoiYWhhZGEiLCJpc3MiOiJodHRwczovL29wdHVtZXJhLmljcDo5NDQzL29pZGMvZW5kcG9pbnQvT1AiLCJhdWQiOiI2MTkxMTQ4YjE2ZDdhNWI1MTRjNzQyMGE2NGE2NmZkNSIsImV4cCI6MTU2ODQwMDE1MiwiaWF0IjoxNTY4MzcxMzUyLCJzdWIiOiJhaGFkYSIsInRlYW1Sb2xlTWFwcGluZ3MiOlsiaWNwOmNvZTphZG1pbiIsImljcDpkZWZhdWx0Om1lbWJlciIsImljcDpkZWZhdWx0OnRlYW1hZG1pbiJdfQ.UAu_T-RurFUnRWFWfZr5OhWGD89kcTbD70f2L24pQIpoi3QOlIJz7lAxozcL8YXitpH1_UBLP1fckphFHVGm1ydqJM3E2KvwAh409D1bvTjzz3_VhHJLK-t1Abz1tmF-ciZWWolJ9EIgLZjlvRlZQsD6Feg36zTZjluSx0ka59AF8r6P9bFk9hfT3xyR8SgTff0PM6aETx7Pz2N4ziD_5YBgXwUdaq639W9H7pyqJBfi16SaOaVirHNxccp2F6Tt1txiYe6ffvu7dcyPNT8dHH4osskO-Lw3IY5bMnh6KbEraLLJPh2FREba-PwaKIGLNDgVt6CpYGoQP5s6jRXzgg
+- name: docker-desktop
+  user:
+    client-certificate-data: REDACTED
+    client-key-data: REDACTED
+- name: optumera-user
+  user:
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoiNjRjMmYxNmJlOTdiMDRiOGZhZDE3ZTBhNGEyYjNmZTVlNTA4Y2RjZiIsInJlYWxtTmFtZSI6ImN1c3RvbVJlYWxtIiwidW5pcXVlU2VjdXJpdHlOYW1lIjoiYWhhZGEiLCJpc3MiOiJodHRwczovL29wdHVtZXJhLmljcDo5NDQzL29pZGMvZW5kcG9pbnQvT1AiLCJhdWQiOiI2MTkxMTQ4YjE2ZDdhNWI1MTRjNzQyMGE2NGE2NmZkNSIsImV4cCI6MTU2NjI0MTA2MywiaWF0IjoxNTY2MjEyMjYzLCJzdWIiOiJhaGFkYSIsInRlYW1Sb2xlTWFwcGluZ3MiOlsiaWNwOmNvZTphZG1pbiIsImljcDpkZWZhdWx0Om1lbWJlciIsImljcDpkZWZhdWx0OnRlYW1hZG1pbiJdfQ.K9mSMB2bVaaM9j55k5xTGjYDPGbjRRU1BLMmA8MeUCGonlExdOv_RAx18X6r0T59oaNr3J35n8b-U5hlSmOCzUk4DOqCndDYNerNG369EybaPMn4QOuGEIWGcDaiRJHg1aztuyzQ3qbbj6bhd232H5LJ_VAqfu6A8TCTA0PTpamdlrLrw1gCoBKHjD0onwJMKY6qN3U4R8XQiKvcWakR4penG1M3FHDcGMKAC2c8OiC8FhI9flqba0-03mhT3ES9u9ooHRuub92ROGDELBnq9BX-TPuK6WyNSHHHASFHPYgEphaHNJaO9LTtvCe5pPmb4EqF_8YT6FDLRRiy1Mdz8g
