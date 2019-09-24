@@ -1,0 +1,9 @@
+com\poc\dao\BankAppDao.class
+com\howtodoinjava\jersey\DemoService.class
+com\poc\service\BankAppService.class
+com\poc\dev\Person.class
+com\poc\dao\UserDao.class
+com\howtodoinjava\jersey\UserService.class
+com\poc\dev\User.class
+com\howtodoinjava\jersey\JerseyService.class
+com\poc\dev\Test.class
